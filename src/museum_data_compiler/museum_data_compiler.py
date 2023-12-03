@@ -1,6 +1,5 @@
 import pandas as pd
 import urllib.parse
-import re
 from bs4 import BeautifulSoup
 
 from utils.fetcher import Fetcher as f
