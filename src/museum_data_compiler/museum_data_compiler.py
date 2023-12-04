@@ -1,3 +1,4 @@
+import datetime
 import pandas as pd
 import urllib.parse
 from bs4 import BeautifulSoup
@@ -10,11 +11,10 @@ class MuseumParser:
 
     def __init__(self):
         self.city_record = {}
+        self.museum_list = []
 
     def fetch_museum_data(self):
         print('fetchhing museum data ...')
-
-        museum_list = []
 
         museum_table = f.fetch_wiki_table('List_of_most-visited_museums', {"class": "wikitable sortable"})
 
@@ -36,9 +36,9 @@ class MuseumParser:
             if museum_obj.wiki is not None:
                 enricher.enrich_museum_details()
 
-            museum_list.append(enricher.enriched_museum)
+            self.museum_list.append(enricher.enriched_museum)
 
-        return museum_list
+        return pd.DataFrame(self.museum_list)
 
     def _parse_museum_row(self, row):
 
@@ -84,6 +84,14 @@ class MuseumParser:
             visitors=visitor_count
             )
 
+    def dump_csv(self):
+        filename = f'museum_data_{datetime.datetime.now().microsecond}.csv'
+        print(f'writing to: {filename}')
+        pd.DataFrame(self.museum_list).to_csv(f'/data/{filename}', sep='\t', encoding='utf-8') # OSError: Cannot save file into a non-existent directory: '/data'
+
+
 if __name__ == "__main__":
-    museum_table = MuseumParser().fetch_museum_data()
+    m = MuseumParser()
+    museum_table = m.fetch_museum_data()
+    m.dump_csv()
     print(museum_table)

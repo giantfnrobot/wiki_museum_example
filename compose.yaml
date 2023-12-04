@@ -1,0 +1,6 @@
+services:
+    parser:
+        build:
+          dockerfile: Dockerfile
+        volumes:
+        - "./data:/data"

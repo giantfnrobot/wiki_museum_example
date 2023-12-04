@@ -2,5 +2,7 @@ from museum_data_compiler import MuseumParser
 
 
 if __name__ == "__main__":
-    museum_table = MuseumParser().fetch_museum_data()
-#     print(museum_table)
+    m = MuseumParser()
+    museum_table = m.fetch_museum_data()
+    m.dump_csv()
+    print(museum_table)

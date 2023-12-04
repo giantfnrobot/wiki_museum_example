@@ -1,0 +1,72 @@
+	name	wiki	city	city_wiki	country	country_wiki	visitors	city_population	urban_population	longitude	latitude	museum_type
+0	Louvre	Louvre	Paris	Paris	France	France	7726321	2102650	10858852.0			Art museum and historic site
+1	Vatican Museums	Vatican_Museums	Vatican City	Vatican_City	Vatican City	Vatican_City	5080866	764		41.90639	12.45444	Art museum
+2	Natural History Museum	Natural_History_Museum,_London	London	London	United Kingdom	United_Kingdom	4654608	8799800	9787426.0	51.49611	-0.17639	Natural history museum
+3	British Museum	British_Museum	London	London	United Kingdom	United_Kingdom	4097253	8799800	9787426.0			
+4	National Museum of Natural History	National_Museum_of_Natural_History	Washington, D.C.	Washington,_D.C.	United States	United_States	3900000	689545	5174759.0	38.8913	-77.0259	Natural History
+5	Tate Modern	Tate_Modern	London	London	United Kingdom	United_Kingdom	3883160	8799800	9787426.0			
+6	National Museum of Korea	National_Museum_of_Korea	Seoul	Seoul	South Korea	South_Korea	3411381	9659322		37.52389	126.98028	History and Art museum
+7	Guangdong Museum	Guangdong_Museum	Guangzhou	Guangzhou	China	China	3359700	18676605	16492590.0	23.11475	113.326336	
+8	Mevlana Museum	Mevlana_Museum	Konya	Konya	Turkey	Turkey	3352505	2277017	1390051.0			Mosque
+9	Musée d'Orsay	Musée_d'Orsay	Paris	Paris	France	France	3270182	2102650	10858852.0	48.86000	2.32639	Art museum, Design/Textile Museum, Historic site[1]
+10	National Gallery of Art	National_Gallery_of_Art	Washington, D.C.	Washington,_D.C.	United States	United_States	3256433	689545	5174759.0	38.89139	-77.02000	
+11	Metropolitan Museum of Art	Metropolitan_Museum_of_Art	New York City	New_York_City	United States	United_States	3208832	8804190	19426449.0	40.7794	-73.9631	Art museum
+12	Centre Pompidou	Centre_Pompidou	Paris	Paris	France	France	3009570	2102650	10858852.0			Cultural center
+13	State Hermitage Museum	State_Hermitage_Museum	Saint Petersburg	Saint_Petersburg,_Russia	Russia	Russia	2812913	5601911				
+14	National Gallery	National_Gallery	London	London	United Kingdom	United_Kingdom	2727119	8799800	9787426.0	51.50889	-0.12833	Art museum
+15	State Russian Museum	State_Russian_Museum	Saint Petersburg	Saint_Petersburg	Russia	Russia	2651688	5601911		59.9387417	30.3323833	Art museum and Historic site
+16	National Museum of Marine Science and Technology	National_Museum_of_Marine_Science_and_Technology	Keelung	Keelung	Taiwan	Taiwan	2582444	362487		25.14056	121.79861	museum
+17	Prado Museum	Prado_Museum	Madrid	Madrid,_Spain	Spain	Spain	2456724	3223334	6211000.0			Non-movable
+18	Victoria and Albert Museum	Victoria_and_Albert_Museum	London	London	United Kingdom	United_Kingdom	2370261	8799800	9787426.0	51.49639	-0.17194	Art museum
+19	London Science Museum	London_Science_Museum	London	London	United Kingdom	United_Kingdom	2334930	8799800	9787426.0	51.4975	-0.174722	
+20	Chinese Aviation Museum	Chinese_Aviation_Museum	Beijing	Beijing	China	China	2300000	21893095	21893095.0			Aviation museum
+21	National Museum of Natural Science	National_Museum_of_Natural_Science	Taichung	Taichung	Taiwan	Taiwan	2299808	2831323	2635000.0	24.15750	120.66639	Museum
+22	Galleria degli Uffizi	Galleria_degli_Uffizi	Florence	Florence	Italy	Italy	2222692	367150		43.76833	11.25528	Art museum, design/textile museum, historic site
+23	Museum of Modern Art	Museum_of_Modern_Art	New York City	New_York_City	United States	United_States	2190440	8804190	19426449.0	40.76167	-73.97750	Art museum
+24	Topography of Terror	Topography_of_Terror	Berlin	Berlin	Germany	Germany	2100000	3850809	4890363.0			
+25	M+	M+	Hong Kong	Hong_Kong	China	China	2034331	7498100		22.300958	114.159645	Art museum
+26	Opium War Museum		Dongguan	Dongguan	China	China	2025800	10466625	10466625.0			
+27	Cité des Sciences et de l'Industrie	Cité_des_Sciences_et_de_l'Industrie	Paris	Paris	France	France	1992823	2102650	10858852.0			Science museum
+28	National Museum of Scotland	National_Museum_of_Scotland	Edinburgh	Edinburgh	United Kingdom	United_Kingdom	1973751	506520	530990.0	55.94694	-3.19000	
+29	State Tretyakov Gallery	State_Tretyakov_Gallery	Moscow	Moscow	Russia	Russia	1910000	13010112	18800000.0	55.74138889	37.62086389	Art museum
+30	National Taiwan Science Education Center	National_Taiwan_Science_Education_Center	Taipei	Taipei	Taiwan	Taiwan	1878504	2494813		25.0546	121.3100	Science Centre
+31	National Science and Technology Museum	National_Science_and_Technology_Museum	Kaohsiung	Kaohsiung	Taiwan	Taiwan	1875372	2737660		22.641361	120.322667	Science museum
+32	National Museum of Modern and Contemporary Art	National_Museum_of_Modern_and_Contemporary_Art	Seoul	Seoul	South Korea	South_Korea	1806641	9659322		37.5785	126.9800	
+33	Smithsonian Museum of American History	Smithsonian_Museum_of_American_History	Washington, D.C.	Washington,_D.C.	United States	United_States	1800000	689545	5174759.0	38.89111	-77.03000	History museum
+34	Rijksmuseum	Rijksmuseum	Amsterdam	Amsterdam	Netherlands	Netherlands	1766084	921402	1459402.0			National museumArt museumHistory museum
+35	California Science Center	California_Science_Center	Los Angeles	Los_Angeles	United States	United_States	1694000	3898747	12237376.0	34.01556	-118.28583	Science museum
+36	National Museum of China	National_Museum_of_China	Beijing	Beijing	China	China	1630911	21893095	21893095.0			Art museum, history museum
+37	Royal Museums Greenwich	Royal_Museums_Greenwich	London	London	United Kingdom	United_Kingdom	1628580	8799800	9787426.0			
+38	Nanjing Museum	Nanjing_Museum	Nanjing	Nanjing	China	China	1610000	9314685	9314685.0	32.0426444	118.8201722	History museum, art museum
+39	Zhejiang Museum of Natural History	Zhejiang_Museum_of_Natural_History	Hangzhou	Hangzhou	China	China	1581263	11936010	10711238.0	30.2336222	119.7273083	
+40	National Gallery of Victoria	National_Gallery_of_Victoria	Melbourne	Melbourne	Australia	Australia	1580303	5031195		-37.82250	144.96889	State Registered Place
+41	Jianchuan Museum Cluster	Jianchuan_Museum_Cluster	Chengdu	Chengdu	China	China	1538143	20937757	15419445.0	30.5032	103.618	
+42	Houston Museum of Natural Science	Houston_Museum_of_Natural_Science	Houston	Houston	United States	United_States	1520000	2301572	5853575.0			Natural history museum
+43	Tokyo Metropolitan Art Museum	Tokyo_Metropolitan_Art_Museum	Tokyo	Tokyo	Japan	Japan	1509970	14094034	39105000.0	35.7172	139.7729	Art museum
+44	Changzhou Museum	Changzhou_Museum	Changzhou	Changzhou	China	China	1508229	5278121	3601079.0			
+45	Humboldt Forum	Humboldt_Forum	Berlin	Berlin	Germany	Germany	1500000	3850809	4890363.0	52.51750	13.40278	Art museum
+46	National Museum of Anthropology	National_Museum_of_Anthropology_(Mexico)	Mexico City	Mexico_City	Mexico	Mexico	1494587	9209944		19.42611	-99.18611	Archaeology museum
+47	National Museum of History	Museo_Nacional_de_Historia	Mexico City	Mexico_City	Mexico	Mexico	1486379	9209944				History museum
+48	National Air and Space Museum	National_Air_and_Space_Museum	Washington, D.C.	Washington,_D.C.	United States	United_States	1486000	689545	5174759.0	38.888	-77.020	Aviation museum
+49	Kaohsiung Museum of Fine Arts	Kaohsiung_Museum_of_Fine_Arts	Kaohsiung	Kaohsiung	Taiwan	Taiwan	1461406	2737660		22.656444	120.286278	Art museum
+50	Acropolis Museum	Acropolis_Museum	Athens	Athens	Greece	Greece	1451727	643452	3059764.0	37.969108	23.728299	Archaeological Museum
+51	China Science and Technology Museum	China_Science_and_Technology_Museum	Beijing	Beijing	China	China	1431189	21893095	21893095.0	40.00472	116.39222	Science museum
+52	Galleria dell'Accademia	Galleria_dell'Accademia	Florence	Florence	Italy	Italy	1428369	367150		43.77694	11.25889	Art museum
+53	Suzhou Museum	Suzhou_Museum	Suzhou	Suzhou	China	China	1417412	12748252	6715559.0	31.3229	120.6278	
+54	Chengdu Museum	Chengdu_Museum	Chengdu	Chengdu	China	China	1404735	20937757	15419445.0	30.66375	104.04459	City museum
+55	Shanghai Science and Technology Museum	Shanghai_Science_and_Technology_Museum	Shanghai	Shanghai	China	China	1403179	26875500				
+56	The National Art Center, Tokyo	The_National_Art_Center,_Tokyo	Tokyo	Tokyo	Japan	Japan	1400096	14094034	39105000.0			
+57	Louis Vuitton Foundation	Louis_Vuitton_Foundation	Paris	Paris	France	France	1398525	2102650	10858852.0	48.87667	2.26333	
+58	Tokyo National Museum	Tokyo_National_Museum	Tokyo	Tokyo	Japan	Japan	1372132	14094034	39105000.0	35.71889	139.77639	Art museum
+59	National Museum, Krakow	National_Museum,_Krakow	Krakow	Krakow	Poland	Poland	1365425	804237		50.06028	19.92389	National museum
+60	Centro Cultural Banco do Brasil	Centro_Cultural_Banco_do_Brasil	São Paulo	São_Paulo	Brazil	Brazil	1364208	12400232				
+61	Van Gogh Museum	Van_Gogh_Museum	Amsterdam	Amsterdam	Netherlands	Netherlands	1364023	921402	1459402.0	52.35833	4.88111	Art museumNational museum
+62	National Museum of Nature and Science	National_Museum_of_Nature_and_Science	Tokyo	Tokyo	Japan	Japan	1350000	14094034	39105000.0	35.715939	139.776527	
+63	Kunsthistorisches Museum	Kunsthistorisches_Museum	Vienna	Vienna	Austria	Austria	1345617	2002821	2223236.0	48.20380194	16.36178694	Art museum
+64	Tianjin Natural History Museum	Tianjin_Natural_History_Museum	Tianjin	Tianjin	China	China	1320752	13866009	13866009.0	39.085	117.209	Natural History Museum
+65	Palacio de Cristal del Retiro	Palacio_de_Cristal_del_Retiro	Madrid	Madrid	Spain	Spain	1318823	3223334	6211000.0			Non-movable
+66	Guggenheim Museum Bilbao	Guggenheim_Museum_Bilbao	Bilbao	Bilbao	Spain	Spain	1289147	345821	775000.0	43.26861	-2.93389	Art museum
+67	Scottish National Gallery	Scottish_National_Gallery	Edinburgh	Edinburgh	United Kingdom	United_Kingdom	1277230	506520	530990.0	55.95083	-3.19556	
+68	National Gallery Singapore	National_Gallery_Singapore	Singapore	Singapore	Singapore	Singapore	1262189	5917600		1.2904889	103.8518611	Art museum
+69	Museo Reina Sofía	Museo_Nacional_Centro_de_Arte_Reina_Sofía	Madrid	Madrid	Spain	Spain	1253183	3223334	6211000.0	40.4085714306	-3.6939961000	Non-movable
+70	Museum of European and Mediterranean Civilisations	Museum_of_European_and_Mediterranean_Civilisations	Marseille	Marseille	France	France	1251030	870321	1618479.0	43.295278	5.361944	National museum of ethnology

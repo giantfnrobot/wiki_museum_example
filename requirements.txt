@@ -2,4 +2,5 @@ bs4
 html5lib
 lxml
 wikipedia
+pandas
 ./museum_data_compiler-0.0.1-py3-none-any.whl
