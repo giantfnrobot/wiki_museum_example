@@ -1,17 +1,18 @@
 version: "3"
 services:
     parser:
-        build:
-          dockerfile: Dockerfile
-        volumes:
-        - ./workspace/data:/data
+      build:
+        dockerfile: parser.dockerfile
+      volumes:
+      - ./workspace/data:/data
     jupyter:
-      image: jupyter/minimal-notebook
       hostname: jupyter
       container_name: jupyter
-      restart: unless-stopped
+      build:
+          dockerfile: jupyter.dockerfile
       ports:
       - "8888:8888"
       volumes:
         - ${PWD}/workspace:/notebook
       working_dir: /notebook
+      restart: unless-stopped
