@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/scipy-notebook
 
 COPY ./requirements.txt requirements.txt
 COPY ./dist/museum_data_compiler-0.0.1-py3-none-any.whl museum_data_compiler-0.0.1-py3-none-any.whl

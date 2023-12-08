@@ -1,10 +1,9 @@
 import pandas as pd
 import urllib.parse
-from bs4 import BeautifulSoup
 
-from utils.fetcher import Fetcher as f
+from utils.fetcher import Fetcher 
 from utils.museum import Museum
-from enricher import Enricher as e
+from enricher import Enricher 
 
 class MuseumParser:
 
@@ -12,34 +11,47 @@ class MuseumParser:
         self.city_record = {}
         self.museum_list = []
 
-    def fetch_museum_data(self):
+    def fetch_museum_data(self, minimum_visitors=0):
         print('fetchhing museum list ...')
 
-        museum_table = f.fetch_wiki_table('List_of_most-visited_museums', {"class": "wikitable sortable"})
+        f = Fetcher()
 
-        for row in museum_table.find_all('tr')[1:]:
+        wiki_table_rows = f.fetch_wiki_table_rows(wiki_page_name='List_of_most-visited_museums', table_identifier={"class": "wikitable sortable"})
+
+        # Iterate over table rows (i.e. museums) and parse data into a list of Museum objects
+        for row in wiki_table_rows:
             
             museum_obj = self._parse_museum_row(row)
-            enricher = e(museum_obj)
+
+            """
+            Dumping data seems like a poor idea if we want to build a basic regression.
+            However, the framing of the problem suggests this should be the case.  Accordinly, the filter can be applied here.
+            """
+            if museum_obj.visitors < minimum_visitors: # Filter on minimum visitors.
+                continue                                
+
+            e = Enricher(museum_obj)
 
             print(f'enriching record for {museum_obj.name} ...')
 
+            # Only fetch the city data if it has not already been parsed/cached.
             if museum_obj.city not in self.city_record: 
-                enricher.enrich_city_data()
+                e.enrich_city_data()
                 self.city_record[museum_obj.city] = {
-                    'city_population': enricher.enriched_museum.city_population, 
-                    'urban_population': enricher.enriched_museum.urban_population
+                    'city_population': e.enriched_museum.city_population, 
+                    'urban_population': e.enriched_museum.urban_population
                     }
             else: 
-                enricher.enriched_museum.city_population = self.city_record[museum_obj.city]['city_population']
-                enricher.enriched_museum.urban_population = self.city_record[museum_obj.city]['urban_population']
+                e.enriched_museum.city_population = self.city_record[museum_obj.city]['city_population']
+                e.enriched_museum.urban_population = self.city_record[museum_obj.city]['urban_population']
 
             if museum_obj.wiki is not None:
-                enricher.enrich_museum_details()
+                e.enrich_museum_details()
 
-            self.museum_list.append(enricher.enriched_museum)
+            self.museum_list.append(e.enriched_museum)
 
-        return pd.DataFrame(self.museum_list)
+        # Return a Dataframe and strip out the columns irrelevant to downstream analysis jobs.
+        return pd.DataFrame(self.museum_list).drop(['wiki', 'city_wiki', 'country_wiki'], axis=1, inplace=True)
 
     def _parse_museum_row(self, row):
 
@@ -73,7 +85,7 @@ class MuseumParser:
                 country_wiki_name = city_wiki_name
         
         # Extract visitor count
-        visitor_count = cells[2].contents[0].replace(',','').strip()
+        visitor_count = int(cells[2].contents[0].replace(',','').strip())
 
         return Museum(
             name=museum_name, 
@@ -87,5 +99,5 @@ class MuseumParser:
 
 if __name__ == "__main__":
     m = MuseumParser()
-    museum_df = m.fetch_museum_data()
+    museum_df = m.fetch_museum_data(minimum_visitors=2000000)
     print(museum_df)
