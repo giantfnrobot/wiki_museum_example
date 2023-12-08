@@ -10,4 +10,4 @@ if __name__ == "__main__":
     filename = f'museum_data_{str(datetime.datetime.now().timestamp()).replace(".","")}.csv'
 
     print(f'writing data to: {filename}')
-    museum_df.to_csv(f'workspace/data/{filename}', sep='\t', encoding='utf-8')
+    museum_df.to_csv(f'workspace/data/{filename}', sep='\t', encoding='utf-8', index=False)

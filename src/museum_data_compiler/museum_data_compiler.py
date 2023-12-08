@@ -50,8 +50,10 @@ class MuseumParser:
 
             self.museum_list.append(e.enriched_museum)
 
-        # Return a Dataframe and strip out the columns irrelevant to downstream analysis jobs.
-        return pd.DataFrame(self.museum_list).drop(['wiki', 'city_wiki', 'country_wiki'], axis=1, inplace=True)
+        # Strip out the columns irrelevant to downstream analysis jobs and return a Dataframe 
+        df_museums = pd.DataFrame(self.museum_list)
+        df_museums.drop(['wiki', 'city_wiki', 'country_wiki'], axis=1, inplace=True)
+        return df_museums
 
     def _parse_museum_row(self, row):
 
@@ -99,5 +101,5 @@ class MuseumParser:
 
 if __name__ == "__main__":
     m = MuseumParser()
-    museum_df = m.fetch_museum_data(minimum_visitors=2000000)
+    museum_df = m.fetch_museum_data(minimum_visitors=4000000)
     print(museum_df)
