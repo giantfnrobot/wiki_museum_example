@@ -1,8 +1,8 @@
 # from src.museum_parser.utils import fetcher
 # from src.museum_parser.utils.museum import Museum
-import utils
-from utils import fetcher
-from utils.museum import Museum
+
+from museum_parser.utils import fetcher
+from museum_parser.utils.museum import Museum
 import re
 
 

@@ -5,11 +5,9 @@ import urllib.parse
 # from src.museum_parser.utils.museum import Museum
 # from src.museum_parser import  enricher 
 
-import utils
-
-from utils import fetcher
-from utils.museum import Museum
-import  enricher
+from museum_parser.utils import fetcher
+from museum_parser.utils.museum import Museum
+import museum_parser.enricher as enricher
 
 
 

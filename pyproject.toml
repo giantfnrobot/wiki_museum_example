@@ -17,8 +17,8 @@ requires-python = ">=3.10"
 Homepage = "https://github.com/giantfnrobot/wiki_museum_example"
 Issues = "https://github.com/giantfnrobot/wiki_museum_example/issues"
 
-[tool.setuptools]
-package-dir = {"" = "src/museum_parser"}
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src/museum_parser"]
