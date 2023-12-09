@@ -25,3 +25,6 @@ MANIFEST
 
 # Misc stuff
 build_script
+.venv/
+.pytest_cache/
+workspace/data/

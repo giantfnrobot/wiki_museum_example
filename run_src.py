@@ -1,12 +1,15 @@
 import datetime
 import pandas as pd
-from museum_data_compiler import MuseumParser
+import sys
+
+sys.path.append('src/museum_parser')
+
+from src.museum_parser import parser
 
 
 if __name__ == "__main__":
     
-    m = MuseumParser()
-    museum_df = m.fetch_museum_data(minimum_visitors=2000000)
+    museum_df = parser.fetch_museum_data(minimum_visitors=2000000)
     filename = f'museum_data_{str(datetime.datetime.now().timestamp()).replace(".","")}.csv'
 
     print(f'writing data to: {filename}')
