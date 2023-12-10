@@ -28,4 +28,3 @@ build_script
 .venv/
 .venv311ls/
 .pytest_cache/
-workspace/data/
