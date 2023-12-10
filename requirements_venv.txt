@@ -1,0 +1,7 @@
+bs4
+html5lib
+lxml
+wikipedia
+pandas
+pytest
+build

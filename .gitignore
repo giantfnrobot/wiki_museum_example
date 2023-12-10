@@ -24,7 +24,6 @@ share/python-wheels/
 MANIFEST
 
 # Misc stuff
-build_script
 .venv/
 .venv311ls/
 .pytest_cache/
