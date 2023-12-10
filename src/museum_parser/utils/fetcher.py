@@ -13,6 +13,7 @@ def fetch_wiki_page(wiki_page_name):
 
     return soup
 
+
 def fetch_wiki_table(wiki_page_name, table_identifier):
 
     soup = fetch_wiki_page(wiki_page_name)

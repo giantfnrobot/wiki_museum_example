@@ -9,7 +9,7 @@ from src.museum_parser import parser
 
 if __name__ == "__main__":
     
-    museum_df = parser.fetch_museum_data(minimum_visitors=2000000)
+    museum_df = parser.fetch_museum_data(minimum_visitors=4000000)
     filename = f'museum_data_{str(datetime.datetime.now().timestamp()).replace(".","")}.csv'
 
     print(f'writing data to: {filename}')

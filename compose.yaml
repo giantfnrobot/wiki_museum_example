@@ -9,7 +9,7 @@ services:
       hostname: jupyter
       container_name: jupyter
       build:
-          dockerfile: jupyter.dockerfile
+        dockerfile: jupyter.dockerfile
       ports:
       - "8888:8888"
       volumes:

@@ -1,25 +1,17 @@
 import pandas as pd
 import urllib.parse
-
-# from src.museum_parser.utils import fetcher
-# from src.museum_parser.utils.museum import Museum
-# from src.museum_parser import  enricher 
-
-from museum_parser.utils import fetcher
-from museum_parser.utils.museum import Museum
-import museum_parser.enricher as enricher
+from dataclasses import asdict
+from utils import fetcher
+from utils.museum import Museum
+import enricher as enricher
 
 
-
-# def __init__(self):
 city_record = {}
 museum_list = []
 
+
 def fetch_museum_data(minimum_visitors=0):
     print('fetching museum list ...')
-
-    # wiki_table_rows = fetcher.fetch_wiki_table_rows(wiki_page_name='List_of_most-visited_museums',
-    #                                                 row_identifier={"class": "wikitable sortable"})
 
     wiki_table_rows = (fetcher.fetch_wiki_page(wiki_page_name='List_of_most-visited_museums')
                        .find('table', {'class': 'wikitable sortable'})
@@ -38,7 +30,7 @@ def fetch_museum_data(minimum_visitors=0):
         if museum_obj.visitors < minimum_visitors:  # Filter on minimum visitors.
             continue
 
-            # Only fetch the city data if it has not already been parsed/cached.
+         # Only fetch the city data if it has not already been parsed/cached.
         if museum_obj.city not in city_record:
             museum_obj = enricher.enrich_city_data(museum_obj)
             city_record[museum_obj.city] = {
@@ -52,7 +44,7 @@ def fetch_museum_data(minimum_visitors=0):
         if museum_obj.wiki is not None:
             museum_obj = enricher.enrich_museum_details(museum_obj)
 
-        museum_list.append(museum_obj)
+        museum_list.append(asdict(museum_obj))
 
     # Strip out the columns irrelevant to downstream analysis jobs and return a Dataframe 
     df_museums = pd.DataFrame(museum_list)
@@ -106,5 +98,5 @@ def parse_museum_row(row):
     )
 
 if __name__ == "__main__":
-    museum_df = fetch_museum_data(minimum_visitors=4000000)
+    museum_df = fetch_museum_data(minimum_visitors=2000000)
     print(museum_df.to_string())
