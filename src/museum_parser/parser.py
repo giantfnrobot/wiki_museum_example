@@ -1,9 +1,9 @@
 import pandas as pd
 import urllib.parse
 from dataclasses import asdict
-from utils import fetcher
-from utils.museum import Museum
-import enricher as enricher
+from museum_parser.utils import fetcher   
+from museum_parser.utils.museum import Museum
+import museum_parser.enricher as enricher
 
 
 city_record = {}
@@ -96,7 +96,3 @@ def parse_museum_row(row):
         country_wiki=country_wiki_name,
         visitors=visitor_count
     )
-
-if __name__ == "__main__":
-    museum_df = fetch_museum_data(minimum_visitors=2000000)
-    print(museum_df.to_string())

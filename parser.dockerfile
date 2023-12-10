@@ -5,4 +5,4 @@ COPY dist/museum_parser-0.0.1-py3-none-any.whl /museum_parser-0.0.1-py3-none-any
 COPY run_pkg.py /run_pkg.py
 RUN python -m pip install --no-cache-dir --upgrade -r requirements.txt
 
-ENTRYPOINT ["python", "-u", "-m", "run_pkg"]
+ENTRYPOINT ["python", "-u", "-m", "run_pkg", "2000000"]

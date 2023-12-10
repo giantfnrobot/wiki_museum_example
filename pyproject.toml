@@ -21,4 +21,4 @@ Issues = "https://github.com/giantfnrobot/wiki_museum_example/issues"
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src/museum_parser"]
+pythonpath = ["src"]
